@@ -1,6 +1,22 @@
 playSound("sound://category_digital/ping.mp3");
 makeNewSpriteAnon("pink alien", ({"x":200,"y":200}));
 spriteSay(({costume: "pink alien"}), "Hello,universe!");
+
+atTime(1, "seconds", function (extraArgs) {
+  moveInDirection(({costume: "pink alien"}), 5, "North");
+});
+
+atTime(2, "seconds", function (extraArgs) {
+  moveInDirection(({costume: "pink alien"}), 5, "North");
+});
+
+atTime(3, "seconds", function (extraArgs) {
+  moveInDirection(({costume: "pink alien"}), 5, "North");
+});
+
+atTime(4, "seconds", function (extraArgs) {
+  moveInDirection(({costume: "pink alien"}), 5, "North");
+});
 function moving_west(this_sprite) {
   moveInDirection(this_sprite, getProp(this_sprite, "speed"), "West");
 }
